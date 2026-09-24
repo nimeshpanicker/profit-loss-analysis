@@ -1,631 +1,383 @@
-# Hospital Emergency Room Analysis Dashboard
+# 💰 P&L Dataset Analysis Dashboard
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
-![Healthcare Analytics](https://img.shields.io/badge/Healthcare-Analytics-blue)
+![Financial Analytics](https://img.shields.io/badge/Financial-Analytics-blue)
 ![Data Analytics](https://img.shields.io/badge/Data%20Analytics-Portfolio-orange)
+![SQL](https://img.shields.io/badge/SQL-Analysis-red)
 ![Status](https://img.shields.io/badge/Project-Completed-success)
 
-> An interactive Power BI healthcare analytics project analysing Emergency Room
-> patient volume, waiting time, satisfaction, admission outcomes, referral
-> patterns, demographics, and demand by day and hour.
+> An interactive Power BI financial analytics project analysing revenue, COGS, operating expenses, gross profit, EBITDA, net profit, margins, regional performance, product profitability, customer contribution, monthly trends, and budget versus actual performance.
+
+---
+
+# 📌 Project Overview
+
+The **P&L Dataset Analysis Dashboard** is a financial analytics project designed to analyse business profitability and financial performance using Power BI and SQL.
+
+The project transforms transaction-level financial data into meaningful business insights covering:
+
+- Revenue performance
+- Cost of Goods Sold (COGS)
+- Operating expenses
+- Gross profit
+- EBITDA
+- Net profit
+- Profit margins
+- Regional performance
+- Product profitability
+- Customer contribution
+- Monthly revenue trends
+- Budget versus actual performance
+
+The dashboard provides a management-focused view of financial performance and helps identify areas requiring further investigation.
+
+---
+
+# 🎯 Project Objectives
+
+The main objectives of this project are to:
+
+- Analyse total business revenue.
+- Calculate gross profit, EBITDA, and net profit.
+- Evaluate profitability margins.
+- Analyse monthly revenue and profit trends.
+- Compare financial performance across regions.
+- Identify high- and low-margin products.
+- Analyse customer revenue contribution.
+- Compare actual performance with budget.
+- Identify potential profitability improvement areas.
+- Build an interactive Power BI financial dashboard.
+- Use SQL to perform structured financial analysis.
+
+---
 
 # 📊 Key Performance Indicators
 
 | KPI | Result |
 |---|---:|
-| Total Patients | **9,216** |
-| Average Wait Time | **35.3 minutes** |
-| Patient Satisfaction Score | **4.99** |
-| Patients Referred | **3,816** |
-| Patients Seen Within 30 Minutes | **59.3%** |
-| Patients Missing 30-Minute Target | **40.7%** |
-| Admitted Patients | **4,612** |
-| Not Admitted | **4,604** |
+| Total Revenue | **$149.16M** |
+| Gross Profit | **$63.37M** |
+| EBITDA | **$33.59M** |
+| Net Profit | **$25.10M** |
+| Gross Profit Margin | **42.49%** |
+| EBITDA Margin | **22.52%** |
+| Net Profit Margin | **16.83%** |
 
 ---
 
 # 📈 Key Findings
 
-## 🏥 Admission Analysis
+## 💰 Overall Financial Performance
 
-| Admission Status | Patients | % of Total |
-|---|---:|---:|
-| Admitted | **4,612** | **50.04%** |
-| Not Admitted | **4,604** | **49.96%** |
-
-Admission outcomes are almost evenly split, with approximately half of the Emergency Room visits resulting in admission.
-
----
-
-## 👥 Age Group Analysis
-
-| Age Group | Patients |
+| Financial Metric | Result |
 |---|---:|
-| 0–9 | **1,056** |
-| 40–49 | **1,135** |
-| 50–59 | **1,151** |
-| 70–79 | **1,153** |
-| 60–69 | **1,154** |
-| 10–19 | **1,179** |
-| 20–29 | **1,188** |
-| 30–39 | **1,200** |
+| Revenue | **$149.16M** |
+| COGS | **$85.79M** |
+| Gross Profit | **$63.37M** |
+| EBITDA | **$33.59M** |
+| Net Profit | **$25.10M** |
+| Gross Profit Margin | **42.49%** |
+| EBITDA Margin | **22.52%** |
+| Net Profit Margin | **16.83%** |
 
-The **30–39 age group** is the largest reported patient cohort with **1,200 patients**, followed by the **20–29 age group** with **1,188 patients**.
+The dataset demonstrates positive profitability across the major financial measures, with a **42.49% gross profit margin**, **22.52% EBITDA margin**, and **16.83% net profit margin**.
 
 ---
 
-## 🏥 Department Referral Analysis
+## 📅 Monthly Revenue Analysis
 
-| Referral Category | Patients |
+| Month | Revenue |
 |---|---:|
-| None | **5,400** |
-| General Practice | **1,840** |
-| Orthopedics | **995** |
-| Physiotherapy | **276** |
-| Cardiology | **248** |
-| Neurology | **~200** |
-| Gastroenterology | **~200** |
-| Renal | **~100** |
+| January | **$13.34M** |
+| February | **$12.16M** |
+| March | **$12.30M** |
+| April | **$12.22M** |
+| May | **$13.05M** |
+| June | **$12.55M** |
+| July | **$11.70M** |
+| August | **$12.27M** |
+| September | **$12.49M** |
+| October | **$12.49M** |
+| November | **$11.72M** |
+| December | **$12.86M** |
 
-A total of **5,400 patients (58.6%)** required no department referral. Among referred patients, **General Practice** and **Orthopedics** were the largest referral destinations.
+**January** recorded the highest monthly revenue at **$13.34M**, while **July** recorded the lowest at **$11.70M**.
 
----
-
-## ⏱️ Wait-Time Analysis
-
-| Wait-Time Metric | Result |
-|---|---:|
-| Average Wait Time | **35.3 minutes** |
-| Seen Within 30 Minutes | **59.3%** |
-| Missed 30-Minute Target | **40.7%** |
-
-The average patient wait time was **35.3 minutes**. The dashboard shows that **59.3%** of patients were seen within the 30-minute target, while **40.7%** waited longer than the target.
+The monthly revenue pattern remains relatively stable, with an average monthly revenue of approximately **$12.43M**.
 
 ---
 
-## ⚥ Gender Analysis
+## 🌎 Regional Analysis
 
-| Gender | Share of Patients |
-|---|---:|
-| Male | **51.05%** |
-| Female | **48.69%** |
-| Not Confirmed | **0.2%** |
+| Region | Revenue | Gross Margin | EBITDA Margin | Net Margin |
+|---|---:|---:|---:|---:|
+| North | **$44.31M** | **42.33%** | **23.08%** | **17.25%** |
+| East | **$39.39M** | **42.53%** | **21.97%** | **16.43%** |
+| West | **$33.16M** | **42.47%** | **22.75%** | **17.03%** |
+| South | **$32.30M** | **42.66%** | **22.20%** | **16.52%** |
 
-The patient population is close to evenly split between male and female patients.
+The **North region** generates the highest revenue at **$44.31M**.
 
----
-
-## 🌎 Race / Ethnicity Distribution
-
-| Race / Ethnicity | Patients |
-|---|---:|
-| White | **2,571** |
-| African American | **1,951** |
-| Two or More Races | **1,557** |
-| Asian | **1,060** |
-| Declined to Identify | **1,030** |
-| Pacific Islander | **~500** |
-| Native American / Alaska Native | **~500** |
-
-The largest reported racial group is **White**, followed by **African American**, **Two or More Races**, and **Asian** patients.
+The **East region** generates the second-highest revenue but has the lowest reported net margin at **16.43%**, making its below-the-line cost structure an area for further investigation.
 
 ---
 
-## 📅 Patient Volume by Day
+## 📦 Product Profitability Analysis
 
-| Day | Patients |
-|---|---:|
-| Monday | **1,314** |
-| Tuesday | **1,305** |
-| Wednesday | **1,260** |
-| Thursday | **1,332** |
-| Friday | **1,310** |
-| Saturday | **1,377** |
-| Sunday | **1,318** |
+The product analysis identifies differences in profitability across the product portfolio.
 
-**Saturday** is the highest-volume day with **1,377 patients**, followed by **Thursday with 1,332** and **Sunday with 1,318**. Wednesday records the lowest volume with **1,260 patients**.
-
----
-
-## 🕐 Patient Volume by Hour
-
-The dashboard uses 2-hour time bands to analyze patient demand throughout the week.
-
-| Hour Band | Analysis |
+| Product Category | Observation |
 |---|---|
-| 23:00–24:00 | **Highest combined volume: 808 patients** |
-| 07:00–08:00 | **Second-highest combined volume: 790 patients** |
+| Mechanical Keyboard | Higher-margin product |
+| Wireless Mouse | Higher-margin product |
+| Bluetooth Speaker | Higher-margin product |
+| Ergonomic Mouse | Lower-margin product |
+| Office Printer | Lower-margin product |
+| 4K Monitor 32 | Lower-margin product |
 
-The **23:00–24:00** period has the highest combined patient volume across the week, followed by **07:00–08:00**.
+The product-level net margin range is approximately **13.36% to 18.92%**, representing a spread of around **5.6 percentage points**.
 
-These patterns can be useful when reviewing staffing coverage and resource allocation.
+Higher-margin products include:
+
+- Mechanical Keyboard
+- Wireless Mouse
+- Bluetooth Speaker
+
+Lower-margin products include:
+
+- Ergonomic Mouse
+- Office Printer
+- 4K Monitor 32
+
+---
+
+## 👥 Customer Analysis
+
+The dataset contains **220 customers**.
+
+The top 10 customers represent approximately **4.5% of the customer base** and contribute around **7.26% of total revenue**.
+
+The top 10 customers generate approximately **$1.05M–$1.13M each**.
+
+This indicates that revenue is distributed across a relatively broad customer base rather than being concentrated among a very small number of customers.
+
+---
+
+## 📊 Budget vs Actual Analysis
+
+| Metric | Performance |
+|---|---:|
+| Revenue | **+8.7%** |
+| Gross Profit | **+8.7%** |
+| Operating Expenses | **-4.8%** |
+| Net Profit | **+8.7%** |
+
+The budget-versus-actual analysis shows positive performance for revenue, gross profit, and net profit, while operating expenses were below the budget comparison.
+
+> **Note:** The budget series is maintained as a separate analytical series because it operates at a different scale from the transaction-level P&L data.
 
 ---
 
 # 💡 Business Insights
 
-### 1. Wait-Time Performance Requires Attention
+## 1. Overall Profitability Remains Positive
 
-Only **59.3%** of patients were seen within the 30-minute target, while **40.7%** waited longer. The average wait time was **35.3 minutes**, highlighting an opportunity to review patient-flow and triage processes.
+The business generated:
 
-### 2. Admission Demand Is Almost Evenly Split
+- **$149.16M revenue**
+- **$63.37M gross profit**
+- **$33.59M EBITDA**
+- **$25.10M net profit**
 
-With **4,612 admitted patients** and **4,604 not admitted patients**, the admission distribution is almost evenly divided at approximately **50% each**.
+The corresponding margins provide a structured view of profitability from revenue through to final profit.
 
-This provides a useful baseline for understanding the relationship between Emergency Room activity and downstream inpatient capacity.
+---
 
-### 3. Referral Demand Is Concentrated
+## 2. Revenue Performance Is Relatively Stable
 
-**5,400 patients**, representing **58.6%** of all visits, required no department referral.
+Monthly revenue ranges from approximately **$11.70M to $13.34M**.
 
-Among patients requiring referrals, **General Practice** recorded the highest volume with **1,840 patients**, followed by **Orthopedics with 995 patients**.
+January recorded the highest revenue, while July recorded the lowest.
 
-### 4. Saturday Has the Highest Patient Volume
+The relatively narrow monthly range indicates that revenue remains broadly consistent throughout the analysed period.
 
-Saturday recorded the highest total patient volume with **1,377 patients**, followed by Thursday and Sunday.
+---
 
-This indicates that day-of-week patterns can be useful when reviewing staffing and resource allocation.
+## 3. North Generates the Highest Revenue
 
-### 5. Late-Night and Early-Morning Periods Show Higher Demand
+The **North region** contributes **$44.31M** in revenue, making it the largest regional revenue contributor.
 
-The **23:00–24:00** hour band recorded the highest combined weekly volume, while **07:00–08:00** was the second-highest.
+The regional analysis also shows relatively narrow net-margin differences across regions.
 
-These time periods can be examined further when planning staffing coverage.
+---
 
-### 6. The 30–39 Age Group Is the Largest Patient Cohort
+## 4. East Requires Further Cost Analysis
 
-Patients aged **30–39** represent the largest age group with **1,200 patients**, followed by the **20–29** group with **1,188 patients**.
+The East region generates **$39.39M** in revenue but reports the lowest net margin among the four regions at **16.43%**.
 
-### 7. Gender Distribution Is Relatively Balanced
+Because gross margins are relatively similar across regions, further investigation can focus on:
 
-Male patients account for **51.05%** of visits, while female patients account for **48.69%**, resulting in a relatively balanced gender distribution.
+- Operating expenses
+- Interest
+- Tax
+- Cost allocations
+- Regional operating structure
 
-> **Note:** These findings describe patterns observed in the dataset and should not by themselves be interpreted as causal relationships.
+---
+
+## 5. Product Profitability Shows Greater Variation
+
+Product-level net margins range from approximately **13.36% to 18.92%**.
+
+The product margin spread is substantially wider than the regional net-margin spread, indicating that product-level profitability is an important area for portfolio analysis.
+
+---
+
+## 6. Customer Revenue Is Broadly Distributed
+
+There are **220 customers**, while the top 10 contribute approximately **7.26% of total revenue**.
+
+This indicates that the business does not depend heavily on a very small group of customers based on the analysed dataset.
+
+---
+
+## 7. Budget Performance Indicates Positive Variance
+
+The budget-versus-actual analysis shows:
+
+- Revenue above comparison by **8.7%**
+- Gross profit above comparison by **8.7%**
+- Operating expenses below comparison by **4.8%**
+- Net profit above comparison by **8.7%**
+
+These variances should be monitored alongside the underlying budget definitions and reporting scale.
 
 ---
 
 # 💡 Business Recommendations
 
-Based on the observed operational patterns, the project identifies the following areas for further hospital operations analysis.
-
-## ⏱️ Patient-Flow & Wait-Time Management
-
-Review:
-
-- Patient-flow processes
-- Triage procedures
-- Causes of wait times exceeding 30 minutes
-- Waiting-time patterns by day and hour
-- Potential bottlenecks during high-volume periods
-
-## 👥 Staffing & Resource Planning
-
-Use:
-
-- Day-of-week patient-volume patterns
-- Hour-band demand
-- Peak-period analysis
-- Admission volumes
-- Referral volumes
-
-to support staffing and resource allocation discussions.
-
-## 🏥 Referral Capacity
-
-Monitor referral capacity in:
-
-- General Practice
-- Orthopedics
-- Physiotherapy
-- Cardiology
-- Neurology
-- Gastroenterology
-- Renal
-
-General Practice and Orthopedics represent the largest referral destinations among patients requiring department referrals.
-
-## 🛏️ Inpatient Capacity Planning
-
-Use Emergency Room admission volume as an operational input when discussing:
-
-- Inpatient bed capacity
-- Admission demand
-- Hospital resource planning
-- ER-to-inpatient patient flow
-
-The nearly 50/50 admission split provides a useful baseline for capacity planning.
-
-## ⭐ Patient Experience
-
-Continue monitoring:
-
-- Patient satisfaction
-- Average wait time
-- Percentage meeting the 30-minute target
-- Wait-time trends
-- Patient-flow changes
-
-This can help assess the relationship between operational performance and patient experience.
-
-## 📊 Dashboard & Data Monitoring
-
-Continue improving:
-
-- KPI monitoring
-- Monthly trend analysis
-- Peak-hour analysis
-- Department-level analysis
-
-
-- Automated narrative validation
-- Exact-value verification against rounded dashboard labels
-
-> **Note:** The dashboard's Key Takeaways narrative contained a day-ranking discrepancy. The validated charted totals identify **Saturday (1,377), Thursday (1,332), and Sunday (1,318)** as the highest-volume days. Dashboard-generated narrative text should therefore be cross-checked against the underlying visual data.
-
-
-# 🏥 Hospital Emergency Room Analysis Dashboard
-
-**Repository:** `hospital-er-analysis`
-
-**Description:** Power BI Healthcare Analytics Dashboard analysing Emergency Room patient volume, wait times, admissions, referrals, demographics, and peak demand periods.
+Based on the financial patterns identified in the analysis, the following areas can be considered for further business investigation.
 
 ---
 
-## 📁 Project Structure
+## 💰 Profitability Management
+
+Monitor:
+
+- Gross profit
+- EBITDA
+- Net profit
+- Gross margin
+- EBITDA margin
+- Net profit margin
+
+Use these KPIs to track profitability across reporting periods and business segments.
+
+---
+
+## 🌎 Regional Performance Management
+
+Review regional performance using:
+
+- Revenue
+- Gross profit
+- EBITDA
+- Net profit
+- Profit margins
+- Operating expenses
+
+The East region can receive additional cost-structure analysis because it reports the lowest net margin.
+
+---
+
+## 📦 Product Margin Optimization
+
+Review lower-margin products such as:
+
+- Ergonomic Mouse
+- Office Printer
+- 4K Monitor 32
+
+Potential areas for investigation include:
+
+- Supplier costs
+- Product pricing
+- Discounts
+- Product-level expenses
+- Cost structure
+- Product mix
+
+Higher-margin products such as:
+
+- Mechanical Keyboard
+- Wireless Mouse
+- Bluetooth Speaker
+
+can also be evaluated for portfolio and sales-mix opportunities.
+
+---
+
+## 👥 Customer Monitoring
+
+Continue monitoring:
+
+- Customer revenue
+- Customer profitability
+- Top customer contribution
+- Customer concentration
+- Revenue distribution
+
+The relatively broad customer base provides a useful basis for continued customer-level analysis.
+
+---
+
+## 📅 Monthly Performance Monitoring
+
+Track:
+
+- Monthly revenue
+- Monthly gross profit
+- Monthly EBITDA
+- Monthly net profit
+- Monthly margins
+- Month-over-month changes
+
+This can help identify emerging changes in financial performance.
+
+---
+
+## 📊 Budget Variance Monitoring
+
+Continue monitoring:
+
+- Revenue variance
+- Gross profit variance
+- Operating expense variance
+- Net profit variance
+
+Budget performance should be analysed together with the definitions, period, and scale of the budget data.
+
+---
+
+# 🧮 Financial Calculation Framework
+
+The project uses the following financial relationships:
 
 ```text
-hospital-er-analysis/
-│
-├── README.md
-│
-├── data/
-│   └── Hospital_ER_Data.csv
-│
-├── dashboard/
-│   └── Healthcare1.pdf
-│
-└── reports/
-    └── Hospital_ER_Dashboard_Project_Report.pdf
+Gross Profit
+= Revenue - COGS
 
+EBITDA
+= Gross Profit - Operating Expenses
 
-🏥 Hospital Emergency Room Analysis Dashboard
-Project Overview
-↓
-Objectives
-↓
-Dataset
-↓
-Tools
-↓
-Dashboard
-↓
-KPIs
-↓
-Insights
-↓
-Recommendations
-↓
-Project Structure
-↓
-Skills
-↓
-Future Improvements
-↓
-Author
+Net Profit
+= EBITDA - Interest - Tax
 
+Gross Profit Margin
+= Gross Profit / Revenue
 
-# Hospital Emergency Room Analysis Dashboard
+EBITDA Margin
+= EBITDA / Revenue
 
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
-![Healthcare Analytics](https://img.shields.io/badge/Healthcare-Analytics-blue)
-![Data Analytics](https://img.shields.io/badge/Data%20Analytics-Portfolio-orange)
-![Status](https://img.shields.io/badge/Project-Completed-success) 
- 
-> An interactive Power BI healthcare analytics project analysing Emergency Room 
-> patient volume, waiting time, satisfaction, admission outcomes, referral 
-> patterns, demographics, and demand by day and hour. 
- 
-# 📊 Key Performance Indicators 
- 
-| KPI | Result | 
-|---|---:| 
-| Total Patients | **9,216** | 
-| Average Wait Time | **35.3 minutes** | 
-| Patient Satisfaction Score | **4.99** | 
-| Patients Referred | **3,816** | 
-| Patients Seen Within 30 Minutes | **59.3%** | 
-| Patients Missing 30-Minute Target | **40.7%** | 
-| Admitted Patients | **4,612** | 
-| Not Admitted | **4,604** | 
- 
---- 
- 
-# 📈 Key Findings 
- 
-## 🏥 Admission Analysis 
- 
-| Admission Status | Patients | % of Total | 
-|---|---:|---:| 
-| Admitted | **4,612** | **50.04%** | 
-| Not Admitted | **4,604** | **49.96%** | 
- 
-Admission outcomes are almost evenly split, with approximately half of the Emergency Room visits resulting in admission. 
- 
---- 
- 
-## 👥 Age Group Analysis 
- 
-| Age Group | Patients | 
-|---|---:| 
-| 0–9 | **1,056** | 
-| 40–49 | **1,135** | 
-| 50–59 | **1,151** | 
-| 70–79 | **1,153** | 
-| 60–69 | **1,154** | 
-| 10–19 | **1,179** | 
-| 20–29 | **1,188** | 
-| 30–39 | **1,200** | 
- 
-The **30–39 age group** is the largest reported patient cohort with **1,200 patients**, followed by the **20–29 age group** with **1,188 patients**. 
- 
---- 
- 
-## 🏥 Department Referral Analysis 
- 
-| Referral Category | Patients | 
-|---|---:| 
-| None | **5,400** | 
-| General Practice | **1,840** | 
-| Orthopedics | **995** | 
-| Physiotherapy | **276** | 
-| Cardiology | **248** | 
-| Neurology | **~200** | 
-| Gastroenterology | **~200** | 
-| Renal | **~100** | 
- 
-A total of **5,400 patients (58.6%)** required no department referral. Among referred patients, **General Practice** and **Orthopedics** were the largest referral destinations. 
- 
---- 
- 
-## ⏱️ Wait-Time Analysis 
- 
-| Wait-Time Metric | Result | 
-|---|---:| 
-| Average Wait Time | **35.3 minutes** | 
-| Seen Within 30 Minutes | **59.3%** | 
-| Missed 30-Minute Target | **40.7%** | 
- 
-The average patient wait time was **35.3 minutes**. The dashboard shows that **59.3%** of patients were seen within the 30-minute target, while **40.7%** waited longer than the target. 
- 
---- 
- 
-## ⚥ Gender Analysis 
- 
-| Gender | Share of Patients | 
-|---|---:| 
-| Male | **51.05%** | 
-| Female | **48.69%** | 
-| Not Confirmed | **0.2%** | 
- 
-The patient population is close to evenly split between male and female patients. 
- 
---- 
- 
-## 🌎 Race / Ethnicity Distribution 
- 
-| Race / Ethnicity | Patients | 
-|---|---:| 
-| White | **2,571** | 
-| African American | **1,951** | 
-| Two or More Races | **1,557** | 
-| Asian | **1,060** | 
-| Declined to Identify | **1,030** | 
-| Pacific Islander | **~500** | 
-| Native American / Alaska Native | **~500** | 
- 
-The largest reported racial group is **White**, followed by **African American**, **Two or More Races**, and **Asian** patients. 
- 
---- 
- 
-## 📅 Patient Volume by Day 
- 
-| Day | Patients | 
-|---|---:| 
-| Monday | **1,314** | 
-| Tuesday | **1,305** | 
-| Wednesday | **1,260** | 
-| Thursday | **1,332** | 
-| Friday | **1,310** | 
-| Saturday | **1,377** | 
-| Sunday | **1,318** | 
- 
-**Saturday** is the highest-volume day with **1,377 patients**, followed by **Thursday with 1,332** and **Sunday with 1,318**. Wednesday records the lowest volume with **1,260 patients**. 
- 
---- 
- 
-## 🕐 Patient Volume by Hour 
- 
-The dashboard uses 2-hour time bands to analyze patient demand throughout the week. 
- 
-| Hour Band | Analysis | 
-|---|---| 
-| 23:00–24:00 | **Highest combined volume: 808 patients** | 
-| 07:00–08:00 | **Second-highest combined volume: 790 patients** | 
- 
-The **23:00–24:00** period has the highest combined patient volume across the week, followed by **07:00–08:00**. 
- 
-These patterns can be useful when reviewing staffing coverage and resource allocation. 
- 
---- 
- 
-# 💡 Business Insights 
- 
-### 1. Wait-Time Performance Requires Attention 
- 
-Only **59.3%** of patients were seen within the 30-minute target, while **40.7%** waited longer. The average wait time was **35.3 minutes**, highlighting an opportunity to review patient-flow and triage processes. 
- 
-### 2. Admission Demand Is Almost Evenly Split 
- 
-With **4,612 admitted patients** and **4,604 not admitted patients**, the admission distribution is almost evenly divided at approximately **50% each**. 
- 
-This provides a useful baseline for understanding the relationship between Emergency Room activity and downstream inpatient capacity. 
- 
-### 3. Referral Demand Is Concentrated 
- 
-**5,400 patients**, representing **58.6%** of all visits, required no department referral. 
- 
-Among patients requiring referrals, **General Practice** recorded the highest volume with **1,840 patients**, followed by **Orthopedics with 995 patients**. 
- 
-### 4. Saturday Has the Highest Patient Volume 
- 
-Saturday recorded the highest total patient volume with **1,377 patients**, followed by Thursday and Sunday. 
- 
-This indicates that day-of-week patterns can be useful when reviewing staffing and resource allocation. 
- 
-### 5. Late-Night and Early-Morning Periods Show Higher Demand 
- 
-The **23:00–24:00** hour band recorded the highest combined weekly volume, while **07:00–08:00** was the second-highest. 
- 
-These time periods can be examined further when planning staffing coverage. 
- 
-### 6. The 30–39 Age Group Is the Largest Patient Cohort 
- 
-Patients aged **30–39** represent the largest age group with **1,200 patients**, followed by the **20–29** group with **1,188 patients**. 
- 
-### 7. Gender Distribution Is Relatively Balanced 
- 
-Male patients account for **51.05%** of visits, while female patients account for **48.69%**, resulting in a relatively balanced gender distribution. 
- 
-> **Note:** These findings describe patterns observed in the dataset and should not by themselves be interpreted as causal relationships. 
- 
---- 
- 
-# 💡 Business Recommendations 
- 
-Based on the observed operational patterns, the project identifies the following areas for further hospital operations analysis. 
- 
-## ⏱️ Patient-Flow & Wait-Time Management 
- 
-Review: 
- 
-- Patient-flow processes 
-- Triage procedures 
-- Causes of wait times exceeding 30 minutes 
-- Waiting-time patterns by day and hour 
-- Potential bottlenecks during high-volume periods 
- 
-## 👥 Staffing & Resource Planning 
- 
-Use: 
- 
-- Day-of-week patient-volume patterns 
-- Hour-band demand 
-- Peak-period analysis 
-- Admission volumes 
-- Referral volumes 
- 
-to support staffing and resource allocation discussions. 
- 
-## 🏥 Referral Capacity 
- 
-Monitor referral capacity in: 
- 
-- General Practice 
-- Orthopedics 
-- Physiotherapy 
-- Cardiology 
-- Neurology 
-- Gastroenterology 
-- Renal 
- 
-General Practice and Orthopedics represent the largest referral destinations among patients requiring department referrals. 
- 
-## 🛏️ Inpatient Capacity Planning 
- 
-Use Emergency Room admission volume as an operational input when discussing: 
- 
-- Inpatient bed capacity 
-- Admission demand 
-- Hospital resource planning 
-- ER-to-inpatient patient flow 
- 
-The nearly 50/50 admission split provides a useful baseline for capacity planning. 
- 
-## ⭐ Patient Experience 
- 
-Continue monitoring: 
- 
-- Patient satisfaction 
-- Average wait time 
-- Percentage meeting the 30-minute target 
-- Wait-time trends 
-- Patient-flow changes 
- 
-This can help assess the relationship between operational performance and patient experience. 
- 
-## 📊 Dashboard & Data Monitoring 
- 
-Continue improving: 
- 
-- KPI monitoring 
-- Monthly trend analysis 
-- Peak-hour analysis 
-- Department-level analysis 
- 
- 
-- Automated narrative validation 
-- Exact-value verification against rounded dashboard labels 
- 
-> **Note:** The dashboard's Key Takeaways narrative contained a day-ranking discrepancy. The validated charted totals identify **Saturday (1,377), Thursday (1,332), and Sunday (1,318)** as the highest-volume days. Dashboard-generated narrative text should therefore be cross-checked against the underlying visual data. 
- 
- 
-# 🏥 Hospital Emergency Room Analysis Dashboard 
- 
-**Repository:** `hospital-er-analysis` 
- 
-**Description:** Power BI Healthcare Analytics Dashboard analysing Emergency Room patient volume, wait times, admissions, referrals, demographics, and peak demand periods. 
- 
---- 
- 
-## 📁 Project Structure 
- 
-```text 
-hospital-er-analysis/ 
-│ 
-├── README.md 
-│ 
-├── data/ 
-│   └── Hospital_ER_Data.csv 
-│ 
-├── dashboard/ 
-│   └── Healthcare1.pdf 
-│ 
-└── reports/ 
-    └── Hospital_ER_Dashboard_Project_Report.pdf 
- 
- 
-🏥 Hospital Emergency Room Analysis Dashboard 
-Project Overview 
-↓ 
-Objectives 
-↓ 
-Dataset 
-↓ 
-Tools 
-↓ 
-Dashboard 
-↓ 
-KPIs 
-↓ 
-Insights 
-↓ 
-Recommendations 
-↓ 
-Project Structure 
-↓ 
-Skills 
-↓ 
-Future Improvements 
-↓ 
-Author 
-Give me readme in thhe above uploaded format
+Net Profit Margin
+= Net Profit / Revenue
