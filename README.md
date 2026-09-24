@@ -16,9 +16,9 @@
 # 📌 Project Overview
 
 This project provides a comprehensive **Profit & Loss (P&L) analysis** of
-transaction-level financial data for a rolling twelve-month reporting period.
+transaction-level financial data covering a rolling twelve-month period.
 
-The analysis covers:
+The analysis evaluates:
 
 - Revenue
 - Cost of Goods Sold (COGS)
@@ -35,10 +35,14 @@ The analysis covers:
 - Product Profitability
 - Customer Revenue
 - Budget vs Actual Performance
+- Monthly Financial Trends
 
 The dataset contains **499 transaction records**, covering **4 regions,
-20 products, and 220 customers** for the reporting period
-**July 2024 – June 2025**.
+20 products, and 220 customers**.
+
+The analysis independently recalculates the major P&L measures from the
+underlying financial components and validates them against the source
+dashboard.
 
 ---
 
@@ -61,7 +65,8 @@ The main objectives of this project are:
 - Calculate year-over-year revenue growth.
 - Build management-level financial KPIs.
 - Validate dashboard calculations against the underlying dataset.
-- Translate financial analysis into business recommendations.
+- Identify data-quality and dashboard-labelling issues.
+- Translate financial findings into business recommendations.
 
 ---
 
@@ -69,14 +74,20 @@ The main objectives of this project are:
 
 | Dataset Attribute | Details |
 |---|---|
-| Transactions | **499** |
+| Transaction Records | **499** |
 | Columns | **20** |
-| Reporting Period | **July 2024 – June 2025** |
+| Reporting Period | **Rolling 12 Months** |
+| Report Period | **Jul 2024 – Jun 2025** |
+| Detailed Dataset Window | **15 Jul 2024 – 15 Jun 2025** |
 | Regions | **4** |
 | Products | **20** |
 | Customers | **220** |
 | Missing Values | **None** |
 | Data Grain | **Transaction Level** |
+
+> **Note:** The reporting period is a rolling twelve-month window rather
+> than a fixed calendar or fiscal year. Period-over-period comparisons
+> should therefore be interpreted accordingly.
 
 ---
 
@@ -90,6 +101,8 @@ The main objectives of this project are:
 | Budget Tracking | Financial Metric, Actual, Budget |
 | Derived Measures | Gross Profit, EBITDA, Net Profit, Net Profit Margin |
 
+All 20 columns are fully populated across the 499 transaction records.
+
 ---
 
 # 🛠️ Tools & Technologies
@@ -99,13 +112,15 @@ The main objectives of this project are:
 | **PostgreSQL** | SQL analysis and financial calculations |
 | **SQL** | Aggregation, ranking, trend and KPI analysis |
 | **Power BI** | Financial dashboard and visualization |
-| **CSV** | Transaction-level data source |
+| **CSV / Dataset** | Transaction-level financial data |
 | **PDF Report** | Financial analysis and documentation |
 | **GitHub** | Project version control and portfolio presentation |
 
 ---
 
 # 🧮 Financial Calculation Framework
+
+The project independently validates the major financial calculations.
 
 ```text
 Gross Profit
